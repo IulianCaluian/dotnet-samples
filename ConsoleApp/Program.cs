@@ -4,6 +4,10 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        ProgramHelpers.ReadAllNumbersFromAFile();
+       var numbers =  ProgramHelpers.ReadAllNumbersFromAFile();
+
+        ProgramHelpers.Sort(numbers, 0, numbers.Count);
+
+        Console.WriteLine(string.Join(',', numbers));
     }
 }
